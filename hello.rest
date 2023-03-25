@@ -1,0 +1,60 @@
+GET http://localhost:3000/api/users
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5hbWUiOiJKb2huIERvZWFzZGFzZCIsImVtYWlsIjoiam9obmRvZUBleGFtcGxlLmNvbWFzYXNkIiwiaWQiOiI2NDFmMjZjYTBhY2E3ZGMxZTEwMDJhZWQifSwiaWF0IjoxNjc5NzY0MzI3LCJleHAiOjE2Nzk3Njc5Mjd9.K2cHw-p109ZWj6ZjO78ZbVRC7VREpGkCGXt8Rh-Aqsg
+
+
+{
+  "name": "John Doeasdasd",
+  "email": "johndoe@example.comasasd",
+  "password": "mypasswordasdasd"
+}
+###
+
+DELETE   http://localhost:3000/api/users/641f2bd6bb05571e9d0077d2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5hbWUiOiJKb2huIERvZWFzZGFzZCIsImVtYWlsIjoiam9obmRvZUBleGFtcGxlLmNvbWFzYXNkIiwiaWQiOiI2NDFmMjZjYTBhY2E3ZGMxZTEwMDJhZWQifSwiaWF0IjoxNjc5NzY0MzI3LCJleHAiOjE2Nzk3Njc5Mjd9.K2cHw-p109ZWj6ZjO78ZbVRC7VREpGkCGXt8Rh-Aqsg
+
+{
+  "name": "John Doasdasdeasdasadasdd",
+  "email": "johndoe@exasdasdample.comasasdasd",
+  "password": "mypasswasdadasdordasdasdasd"
+}
+
+###
+
+PATCH  http://localhost:3000/api/users/641ecbd392b465335c1019d6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQxZjI2Y2EwYWNhN2RjMWUxMDAyYWVkIiwibmFtZSI6IkpvaG4gRG9lYXNkYXNkIiwiZW1haWwiOiJqb2huZG9lQGV4YW1wbGUuY29tYXNhc2QifSwiaWF0IjoxNjc5NzYzNDIzLCJleHAiOjE2Nzk3NjcwMjN9.xQLz457jeJca0QUnOVxL24qbhVnCntBmI9pTGZbgQ-Y
+Content-Type: application/json
+
+{
+  "name": "John Doeasdas",
+  "email": "helloasd",
+  "password": "mypasswordasdasd"
+}
+###
+
+GET http://localhost:3000/api/tasks
+
+### 
+PATCH http://localhost:3000/api/tasks/641f1a5e02344d509680ac5d
+Content-Type: application/json
+
+{
+  "title": "Finish projectasdasdasdsf",
+  "description": "Complete the project before the deadlineasdasdasdsdfsdf",
+  "user": "60e8fa80a2e8c3143c0e5693"
+}
+
+###
+DELETE http://localhost:3000/api/tasks/641f0be61e669619e329ac1e
+
+###
+
+POST http://localhost:3000/api/login
+Host: localhost:3000
+Content-Type: application/json
+
+{
+"email": "hello",
+"password": "mypasswordasd"
+}
