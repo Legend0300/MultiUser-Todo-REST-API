@@ -14,8 +14,6 @@ const path = require('path');
 
 
 
-
-
 router.get("/home" , (req, res) => {
   res.render("home" , {user: req.user});
 }
