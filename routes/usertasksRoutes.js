@@ -13,6 +13,15 @@ router.use(cookieParser());
 
 
 
+router.get("/home" , (req, res) => {
+  res.render("home" , {user: req.user});
+}
+)
+
+router.get("/login" , (req, res) => {
+  res.render("login");
+}
+)
 
 router.get("/logout" , (req, res) => {
     res.clearCookie('jwt');
