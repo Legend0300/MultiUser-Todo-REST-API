@@ -22,6 +22,11 @@ app.get('/login', function(req, res){
     }
 );
 
+app.get("/" , function(req, res){
+    res.send('home page of the API!');
+    }
+);
+
 app.post('/login', function(req, res){
 
 });
