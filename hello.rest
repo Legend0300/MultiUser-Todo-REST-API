@@ -1,10 +1,10 @@
-GET http://localhost:3000/api/users
+POST http://localhost:3000/api/users
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5hbWUiOiJKb2huIERvZWFzZGFzZCIsImVtYWlsIjoiam9obmRvZUBleGFtcGxlLmNvbWFzYXNkIiwiaWQiOiI2NDFmMjZjYTBhY2E3ZGMxZTEwMDJhZWQifSwiaWF0IjoxNjc5NzY0MzI3LCJleHAiOjE2Nzk3Njc5Mjd9.K2cHw-p109ZWj6ZjO78ZbVRC7VREpGkCGXt8Rh-Aqsg
 
 
 {
-  "name": "John Doeasdasd",
+  "name": "John Doeasdasdasd",
   "email": "johndoe@example.comasasd",
   "password": "mypasswordasdasd"
 }
@@ -32,22 +32,31 @@ Content-Type: application/json
   "password": "mypasswordasdasd"
 }
 ###
-
-GET http://localhost:3000/api/tasks
-
-### 
-PATCH http://localhost:3000/api/tasks/641f1a5e02344d509680ac5d
+POST http://localhost:3000/api/tasks
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5hbWUiOiJKb2huIERvZWFzZGFzZCIsImVtYWlsIjoiam9obmRvZUBleGFtcGxlLmNvbWFzYXNkIiwiaWQiOiI2NDFmMzAyMmNhMWM5NWZmNTRhNGRlNTYifSwiaWF0IjoxNjc5ODEyMzQ3LCJleHAiOjE2Nzk4MTU5NDd9.sVYGmyORpRAKqBkGhgLgrhrcYSroXbNQ-TL4ZA13geY
 
 {
-  "title": "Finish projectasdasdasdsf",
-  "description": "Complete the project before the deadlineasdasdasdsdfsdf",
+      "title": "req.body.titleasdasd",
+    "description": "req.body.descriptionasdasd"
+}
+###
+GET http://localhost:3000/api/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5hbWUiOiJKb2huIERvZWFzZGFzZCIsImVtYWlsIjoiam9obmRvZUBleGFtcGxlLmNvbWFzYXNkIiwiaWQiOiI2NDFmMzAyMmNhMWM5NWZmNTRhNGRlNTYifSwiaWF0IjoxNjc5ODEyMzQ3LCJleHAiOjE2Nzk4MTU5NDd9.sVYGmyORpRAKqBkGhgLgrhrcYSroXbNQ-TL4ZA13geY
+### 
+GET  http://localhost:3000/api/tasks/641f319d1c509f97ee55f469
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5hbWUiOiJKb2huIERvZWFzZGFzZCIsImVtYWlsIjoiam9obmRvZUBleGFtcGxlLmNvbWFzYXNkIiwiaWQiOiI2NDFmMzAyMmNhMWM5NWZmNTRhNGRlNTYifSwiaWF0IjoxNjc5ODEyMzQ3LCJleHAiOjE2Nzk4MTU5NDd9.sVYGmyORpRAKqBkGhgLgrhrcYSroXbNQ-TL4ZA13geY
+
+{
+  "title": "Finish projectasdasdasdsfasd",
+  "description": "Complete the project before the deadlineasdasdasdsdfsdfasd",
   "user": "60e8fa80a2e8c3143c0e5693"
 }
 
 ###
-DELETE http://localhost:3000/api/tasks/641f0be61e669619e329ac1e
-
+DELETE http://localhost:3000/api/tasks/641f1a5e02344d509680ac5d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5hbWUiOiJKb2huIERvZWFzZGFzZCIsImVtYWlsIjoiam9obmRvZUBleGFtcGxlLmNvbWFzYXNkIiwiaWQiOiI2NDFmMzAyMmNhMWM5NWZmNTRhNGRlNTYifSwiaWF0IjoxNjc5NzY1NTYyLCJleHAiOjE2Nzk3NjkxNjJ9.4DYxBQRbo3wLcQ3aYoidni-Tl_hRRs-tEAqr0OqlVww
 ###
 
 POST http://localhost:3000/api/login
@@ -55,6 +64,6 @@ Host: localhost:3000
 Content-Type: application/json
 
 {
-"email": "hello",
-"password": "mypasswordasd"
+"email": "johndoe@example.comasasd",
+"password": "mypasswordasdasd"
 }
