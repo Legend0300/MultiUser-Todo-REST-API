@@ -8,6 +8,9 @@ const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: true }));
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
+const path = require('path');
+
+app.set('views', path.join(__dirname, 'views'));
 
 
 dbConnection();
