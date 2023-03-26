@@ -12,10 +12,7 @@ const cookieParser = require('cookie-parser');
 router.use(cookieParser());
 
 
-router.get("/home" , (req, res) => {
-  res.render("home" , {user: req.user});
-}
-)
+
 
 router.get("/logout" , (req, res) => {
     res.clearCookie('jwt');
