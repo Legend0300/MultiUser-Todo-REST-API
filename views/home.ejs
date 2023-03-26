@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home Page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6 mt-5">
+            <div class="card">
+              <div class="card-body">
+                <% if (user) { %>
+                  <h4 class="card-title">Welcome <%= user.name %>!</h4>
+                  <p class="card-text">You are logged in with email <%= user.email %>.</p>
+                <% } else { %>
+                  <h4 class="card-title">Welcome to My Website!</h4>
+                  <p class="card-text">Please log in or register below:</p>
+                  <a href="/login" class="btn btn-primary mr-2">Login</a>
+                  <a href="/api/register" class="btn btn-dark">Register</a>
+                <% } %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

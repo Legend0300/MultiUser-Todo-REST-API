@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Profile</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container mt-4">
+    <h1>User Profile</h1>
+    <hr>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card mt-4">
+            <div class="card-body">
+              <h4 class="card-title">Name:</h4>
+              <p class="card-text"><%= user.name %></p>
+              <h4 class="card-title">Email:</h4>
+              <p class="card-text"><%= user.email %></p>
+              <h4 class="card-title">ID<span class="text-muted">:</span></h4>
+              <p class="card-text"><%= user.id %></p>
+              <h4 class="card-title">Role:</h4>
+              <p class="card-text"><%= usertype || "User"%></p>
+              <a href="/api/users" class="btn btn-success">Dashboard</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap JS -->
+</body>
+</html>

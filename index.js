@@ -4,8 +4,10 @@ const apis = require('./routes/usertasksRoutes');
 app = express();
 app.use(express.json());
 app.use('/api', apis);
-
-
+const bodyParser = require('body-parser')
+app.use(bodyParser.urlencoded({ extended: true }));
+const cookieParser = require('cookie-parser');
+app.use(cookieParser());
 
 
 dbConnection();
