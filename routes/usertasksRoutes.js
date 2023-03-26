@@ -11,7 +11,6 @@ router.use(express.json())
 const cookieParser = require('cookie-parser');
 router.use(cookieParser());
 const path = require('path');
-router.set('view engine', 'ejs');
 
 
 
