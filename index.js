@@ -17,7 +17,10 @@ dbConnection();
 app.set('view engine', 'ejs');
 app.use(express.json());
 
-
+router.get("/login" , (req, res) => {
+  res.render("login");
+}
+)
   
 
 
