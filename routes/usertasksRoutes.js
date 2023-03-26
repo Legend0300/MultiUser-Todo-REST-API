@@ -12,8 +12,6 @@ const cookieParser = require('cookie-parser');
 router.use(cookieParser());
 const path = require('path');
 
-app.set('views', path.join(__dirname, 'views'));
-
 
 
 router.get("/home" , (req, res) => {
