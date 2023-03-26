@@ -9,6 +9,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 const path = require('path');
+app.set('view engine', 'ejs');
+app.set('views', __dirname + '/views');
 
 
 
@@ -16,7 +18,6 @@ dbConnection();
 
 
 
-app.set('view engine', 'ejs');
 app.use(express.json());
 
 app.get('/', (req, res) => {
