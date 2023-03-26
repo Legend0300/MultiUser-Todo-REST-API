@@ -17,20 +17,7 @@ dbConnection();
 app.set('view engine', 'ejs');
 app.use(express.json());
 
-app.get('/login', function(req, res){
-    res.render('login');
-    }
-);
 
-app.get("/" , function(req, res){
-    res.send('home page of the API!');
-    }
-);
-
-app.post('/login', function(req, res){
-
-});
-  
   
 
 
