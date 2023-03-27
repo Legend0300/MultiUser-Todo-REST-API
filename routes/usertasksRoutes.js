@@ -52,6 +52,77 @@ router.get('/users', adminauth , async (req, res) => {
 
 });
 
+
+router.get("/filter" , auth , async (req, res) => {
+  res.render("searchtasks");
+})
+
+
+
+router.post("/filteredtasks", auth , async(req, res) => {
+  const filtername = req.body.filteredtasks;
+  console.log(filtername);
+  try {
+    const tasks = await Task.find({
+      user: req.user.id,
+      title: { $regex: filtername, $options: "i" }
+    });
+    res.render("tasks", {tasks: tasks ,
+      name: req.user.name,
+      id: req.user.id,
+      email: req.user.email,
+});
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+
+});
+
+router.get("/filterusers" , adminauth , async (req, res) => {
+  res.render("searchusers");
+})
+
+router.post("/filterusers", adminauth , async(req, res) => {
+  const filtername = req.body.name;
+  const filterrole = req.body.role;
+  console.log(filtername);
+  if(filtername) {
+    try {
+      const users = await User.find({
+        name: { $regex: filtername, $options: "i" }
+      });
+      res.render("users", {users: users ,
+        name: req.user.name,
+        id: req.user.id,
+        email: req.user.email,
+      });
+    } catch (error) {
+      res.status(500).json({ message: error.message });
+    }
+  }
+  else if(filterrole) {
+  
+    try {
+      const users = await User.find({
+        usertype: { $regex: filterrole, $options: "i" }
+      });
+      res.render("users", {users: users ,
+        name: req.user.name,
+        id: req.user.id,
+        email: req.user.email,
+      });
+    } catch (error) {
+      res.status(500).json({ message: error.message });
+    }
+
+  }
+
+
+});
+
+
+
+
 // GET a user by id
 router.get('/users/:id', adminauth , getUser, (req, res) => {
   res.render("user" , {user: req.user ,usertype: req.body.usertype});

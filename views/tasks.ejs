@@ -31,6 +31,8 @@ h1, h2, h3, h4, h5, h6 {
           <p class="h5">Your email is <%= email %></p>
         </div>
       </div>
+      
+
       <h2 class="text-center my-4">My Tasks</h2>
       <ul class="list-group">
         <% tasks.forEach(function(task) { %>
@@ -47,6 +49,8 @@ h1, h2, h3, h4, h5, h6 {
       <div class="text-center my-4">
         <a href="/api/newtask" class="btn btn-success text-white me-2">Add Task</a>
         <a href="/api/logout" class="btn btn-warning text-white">Logout</a>
+        <a href="/api/filter" class="btn btn-dark text-white">Search Tasks</a>
+        <a href="/api/tasks" class="btn btn-success">Dashboard</a>
       </div>
     </div>
     <!-- Bootstrap JS -->
